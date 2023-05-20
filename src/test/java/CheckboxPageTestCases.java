@@ -21,9 +21,9 @@ public class CheckboxPageTestCases extends BasePage{
     @Test
     public void clickOnTheSingleCheckboxCheckmark() throws InterruptedException{
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
-       var caca= driver.findElement(By.id("txtAge"));
+       var text= driver.findElement(By.id("txtAge"));
 
         checkboxPage.clickOnSingleCheckbox();
-        Assert.assertEquals(caca.getText(), "Success - Check box is checked");
+        Assert.assertEquals(text.getText(), "Success - Check box is checked");
     }
 }
