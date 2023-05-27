@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13bb96ec-5fed-403e-b38e-9b749a921741" name="Changes" comment="ProiectFinalIugaMirceaCatalin">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/RadioButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SimpleFormTestCases/RadioButtonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CheckboxPageTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CheckboxPageTestCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProiectFinalIugaMirceaCatalin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProiectFinalIugaMirceaCatalin-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CheckboxPageTestCases.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CheckboxPageTestCases.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +62,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
-  <component name="RunManager" selected="Maven.ProiectFinalIugaMirceaCatalin">
+  <component name="RunManager" selected="TestNG.RadioButtonTest">
     <configuration name="ProiectFinalIugaMirceaCatalin" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -80,10 +86,27 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="CheckboxPageTestCases" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckboxPageTestCases" type="TestNG" nameIsGenerated="true">
       <module name="ProiectFinalIugaMirceaCatalin" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CheckboxPageTestCases" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RadioButtonTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ProiectFinalIugaMirceaCatalin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SimpleFormTestCases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="SimpleFormTestCases" />
+      <option name="MAIN_CLASS_NAME" value="SimpleFormTestCases.RadioButtonTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -137,6 +160,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Unnamed" type="TestNG" nameIsGenerated="true">
+      <module name="ProiectFinalIugaMirceaCatalin" />
+      <shortenClasspath name="NONE" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProiectFinalIugaMirceaCatalin" />
       <option name="PACKAGE_NAME" value="" />
@@ -150,6 +193,8 @@
     <list>
       <item itemvalue="Maven.ProiectFinalIugaMirceaCatalin" />
       <item itemvalue="TestNG.CheckboxPageTestCases" />
+      <item itemvalue="TestNG.Unnamed" />
+      <item itemvalue="TestNG.RadioButtonTest" />
       <item itemvalue="TestNG.SimpleFormTestCases (1)" />
       <item itemvalue="TestNG.SimpleFormTestCases" />
       <item itemvalue="TestNG.SimpleFormTestCases.writeNumbersThenClickOnTheGetCheckedValueButton" />
@@ -157,8 +202,8 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RadioButtonTest" />
         <item itemvalue="TestNG.SimpleFormTestCases (1)" />
-        <item itemvalue="TestNG.CheckboxPageTestCases" />
         <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.SimpleFormTestCases.writeNumbersThenClickOnTheGetCheckedValueButton" />
         <item itemvalue="TestNG.SimpleFormTestCases" />
@@ -188,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684608842613</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ProiectFinalIugaMirceaCatalin">
+      <created>1684866057409</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684866057409</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
