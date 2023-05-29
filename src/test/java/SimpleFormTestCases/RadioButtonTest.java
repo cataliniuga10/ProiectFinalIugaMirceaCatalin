@@ -1,22 +1,27 @@
 package SimpleFormTestCases;
 
 import Pages.BasePage;
-import Pages.RadioButton;
+
+import Pages.RadioButtonPage;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.sql.Driver;
+
 public class RadioButtonTest extends BasePage {
-    private RadioButton radioButton;
+    private RadioButtonPage radioButton;
     @BeforeMethod
     public void setUp(){
         super.setUp();
-        radioButton = new RadioButton(driver);
-    }
+        radioButton = new RadioButtonPage(driver);}
    @Test
    public void clickOnMaleButton() throws InterruptedException{
-       driver.findElement(By.xpath("//*[@id=\"buttoncheck\"]"));
-     var RadioButton = driver.findElement(By.xpath("//*[@id=\"buttoncheck\"]"));
-       Assert.assertEquals (  true , RadioButton.isSelected());
-}}
+       By radioButton = By.cssSelector("radioButton");
+       var radioButton1 = driver.findElement(radioButton);
+        Assert.assertEquals(radioButton1.isSelected(), true );
+
+    }}
+
+

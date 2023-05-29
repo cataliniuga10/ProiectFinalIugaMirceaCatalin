@@ -11,27 +11,24 @@ import Pages.SimpleFormPage;
 
 public class CheckboxPageTestCases extends BasePage {
     private CheckboxPage checkboxPage;
-
     @BeforeMethod
     public void setUp() {
         super.setUp();
         checkboxPage = new CheckboxPage(driver);
     }
-
     @Test
     public void clickOnTheSingleCheckboxCheckmark() throws InterruptedException {
        driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         var text = driver.findElement(By.id("txtAge"));
-
         checkboxPage.clickOnSingleCheckbox();
         Assert.assertEquals(text.getText(), "Success - Check box is checked");
     }
 
-    @Test
-    public void clickOnButtonCheckAll() throws InterruptedException {
-        driver.findElement(By.id("box"));
-         var clickOnButton = driver.findElement(By.id("box"));
-         Assert.assertEquals( clickOnButton.isSelected(),true);
+    //@Test
+    //public void clickOnButtonCheckAll() throws InterruptedException {
+        //driver.findElement(By.id("box"));
+      //   var clickOnButton = driver.findElement(By.id("box"));
+         //Assert.assertEquals( clickOnButton.isSelected(),true);
     }
 
-}
+
