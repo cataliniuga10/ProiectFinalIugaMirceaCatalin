@@ -10,9 +10,9 @@ public class RadioButtonPage extends BasePage{
     }
 By CloseWindow = By.id("exit_popup_close");
     public void CloseWindow(){driver.findElement(CloseWindow).click();}
-    By RadioButtonDemo = By.cssSelector("#__next > div.wrapper > section.mt-50 > div > div > div.w-3\\/12.smtablet\\:w-full > div.mb-10.sp__list.active > ul > li:nth-child(3) > a");
+   By RadioButtonDemo = By.xpath("//*[@id=\"__next\"]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[1]/a");
      public void RadioButtonDemo(){driver.findElement(RadioButtonDemo).click();}
- By radioButton = By.cssSelector("input[type='radio'][value='Male'][name='optradio']");
+ By radioButton = By.xpath("//*[@id=\"__next\"]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[1]/a");
     public void radioButton(){driver.findElement(radioButton).click();}
 
 }

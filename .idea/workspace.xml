@@ -4,21 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13bb96ec-5fed-403e-b38e-9b749a921741" name="Changes" comment="ProiectFinalIugaMirceaCatalin">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/RadioButtonPage.java" afterDir="false" />
+    <list default="true" id="13bb96ec-5fed-403e-b38e-9b749a921741" name="Changes" comment="ProiectFinalIugaMirceaCatalin1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/RadioButton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/CheckboxPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/CheckboxPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/RadioButtonPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/RadioButtonPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CheckboxPageTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CheckboxPageTestCases.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SimpleFormTestCases/RadioButtonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SimpleFormTestCases/RadioButtonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pages/CheckboxPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/CheckboxPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/CheckboxPageTestCases.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CheckboxPageTestCases.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -60,10 +62,10 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -71,7 +73,7 @@
       <recent name="radioButton" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RadioButtonTest">
+  <component name="RunManager" selected="TestNG.CheckboxPageTestCases">
     <configuration name="ProiectFinalIugaMirceaCatalin (1)" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -302,11 +304,33 @@
       <option name="project" value="LOCAL" />
       <updated>1685210136879</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ProiectFinalIugaMirceaCatalin1">
+      <created>1685378722175</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685378722175</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ProiectFinalIugaMirceaCatalin1">
+      <created>1685474896556</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685474896556</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ProiectFinalIugaMirceaCatalin" />
-    <option name="LAST_COMMIT_MESSAGE" value="ProiectFinalIugaMirceaCatalin" />
+    <MESSAGE value="ProiectFinalIugaMirceaCatalin1" />
+    <option name="LAST_COMMIT_MESSAGE" value="ProiectFinalIugaMirceaCatalin1" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ProiectFinalIugaMirceaCatalin$CheckboxPageTestCases.ic" NAME="CheckboxPageTestCases Coverage Results" MODIFIED="1685468555120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

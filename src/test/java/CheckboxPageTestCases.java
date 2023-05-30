@@ -1,13 +1,9 @@
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.*;
 import Pages.BasePage;
 import Pages.CheckboxPage;
-import Pages.SimpleFormPage;
+import org.openqa.selenium.By;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 public class CheckboxPageTestCases extends BasePage {
     private CheckboxPage checkboxPage;
@@ -18,17 +14,18 @@ public class CheckboxPageTestCases extends BasePage {
     }
     @Test
     public void clickOnTheSingleCheckboxCheckmark() throws InterruptedException {
-       driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
+        checkboxPage.GetTxtAge();
         var text = driver.findElement(By.id("txtAge"));
-        checkboxPage.clickOnSingleCheckbox();
-        Assert.assertEquals(text.getText(), "Success - Check box is checked");
+        Assert.assertEquals(text.getText(),"Success - Check box is checked");
     }
 
-    //@Test
-    //public void clickOnButtonCheckAll() throws InterruptedException {
-        //driver.findElement(By.id("box"));
-      //   var clickOnButton = driver.findElement(By.id("box"));
-         //Assert.assertEquals( clickOnButton.isSelected(),true);
+    @Test
+    public void clickOnButtonCheckAll() throws InterruptedException {
+        checkboxPage.clickOnTheCheckAllButton();
+        var checkbutton = driver.findElement(By.xpath("//*[@id=\"isAgeSelected\"]"));
+        Assert.assertEquals(checkbutton.isSelected(),true);
+    }
+
     }
 
 
