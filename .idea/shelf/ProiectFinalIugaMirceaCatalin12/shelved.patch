@@ -1,0 +1,517 @@
+Index: src/main/java/Pages/RadioButtonPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Pages;\r\n\r\nimport org.openqa.selenium.By;\r\nimport org.openqa.selenium.WebDriver;\r\n\r\npublic class RadioButtonPage extends BasePage{\r\n    public RadioButtonPage(WebDriver driver){\r\n        super(driver);\r\n\r\n    }\r\nBy CloseWindow = By.id(\"exit_popup_close\");\r\n    public void CloseWindow(){driver.findElement(CloseWindow).click();}\r\n   By RadioButtonDemo = By.xpath(\"//*[@id=\\\"__next\\\"]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[1]/a\");\r\n     public void RadioButtonDemo(){driver.findElement(RadioButtonDemo).click();}\r\n By radioButton = By.xpath(\"//*[@id=\\\"__next\\\"]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[1]/a\");\r\n    public void radioButton(){driver.findElement(radioButton).click();}\r\n\r\n}\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Pages/RadioButtonPage.java b/src/main/java/Pages/RadioButtonPage.java
+--- a/src/main/java/Pages/RadioButtonPage.java	(revision 3336cf0e3fd8fb993e519245d538b87e7aef6c97)
++++ b/src/main/java/Pages/RadioButtonPage.java	(date 1685543688924)
+@@ -2,20 +2,18 @@
+ 
+ import org.openqa.selenium.By;
+ import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.WebElement;
+ 
+ public class RadioButtonPage extends BasePage{
+     public RadioButtonPage(WebDriver driver){
+         super(driver);
+-
++       driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
++       driver.findElement(By.name("optradio")).click();
+     }
+-By CloseWindow = By.id("exit_popup_close");
+-    public void CloseWindow(){driver.findElement(CloseWindow).click();}
+-   By RadioButtonDemo = By.xpath("//*[@id=\"__next\"]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[1]/a");
+-     public void RadioButtonDemo(){driver.findElement(RadioButtonDemo).click();}
+- By radioButton = By.xpath("//*[@id=\"__next\"]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[1]/a");
+-    public void radioButton(){driver.findElement(radioButton).click();}
++     By clickMaleButton = By.name("optradio");
+ 
+-}
++    public WebElement Male(){return driver.findElement(clickMaleButton);
++}}
+ 
+ 
+ 
+Index: src/test/java/SimpleFormTestCases/RadioButtonTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package SimpleFormTestCases;\r\n\r\nimport Pages.BasePage;\r\nimport Pages.RadioButtonPage;\r\nimport org.openqa.selenium.By;\r\nimport org.testng.Assert;\r\nimport org.testng.annotations.BeforeMethod;\r\nimport org.testng.annotations.Test;\r\n\r\npublic class RadioButtonTest extends BasePage {\r\n    private RadioButtonPage radioButton;\r\n    @BeforeMethod\r\n    public void setUp(){\r\n        super.setUp();\r\n        radioButton = new RadioButtonPage(driver);}\r\n   @Test\r\n\r\n   public void clickOnMaleButton() throws InterruptedException{\r\n       By radioButton = By.xpath(\"radioButton\");\r\n       var radioButton1 = driver.findElement(radioButton);\r\n        Assert.assertEquals(radioButton1.isSelected(), true );\r\n\r\n    }}\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/SimpleFormTestCases/RadioButtonTest.java b/src/test/java/SimpleFormTestCases/RadioButtonTest.java
+--- a/src/test/java/SimpleFormTestCases/RadioButtonTest.java	(revision 3336cf0e3fd8fb993e519245d538b87e7aef6c97)
++++ b/src/test/java/SimpleFormTestCases/RadioButtonTest.java	(date 1685560543510)
+@@ -2,24 +2,32 @@
+ 
+ import Pages.BasePage;
+ import Pages.RadioButtonPage;
+-import org.openqa.selenium.By;
+ import org.testng.Assert;
+ import org.testng.annotations.BeforeMethod;
+ import org.testng.annotations.Test;
+ 
+ public class RadioButtonTest extends BasePage {
+-    private RadioButtonPage radioButton;
++    private RadioButtonPage radioButtonPage;
+     @BeforeMethod
+     public void setUp(){
+         super.setUp();
+-        radioButton = new RadioButtonPage(driver);}
++        radioButtonPage = new RadioButtonPage(driver);}
+    @Test
+ 
+-   public void clickOnMaleButton() throws InterruptedException{
+-       By radioButton = By.xpath("radioButton");
+-       var radioButton1 = driver.findElement(radioButton);
+-        Assert.assertEquals(radioButton1.isSelected(), true );
++   public void clickOnMaleButton() throws InterruptedException {
++
++       var maleButton = radioButtonPage.Male();
++       maleButton.click();
++       Assert.assertEquals(maleButton.isSelected(), true);
+ 
+-    }}
++   }}
+ 
+ 
++
++
++
++
++
++
++
++
+Index: src/test/java/DownloadFileDemoTestCases.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/DownloadFileDemoTestCases.java b/src/test/java/DownloadFileDemoTestCases.java
+new file mode 100644
+--- /dev/null	(date 1685733229687)
++++ b/src/test/java/DownloadFileDemoTestCases.java	(date 1685733229687)
+@@ -0,0 +1,26 @@
++import Pages.BasePage;
++import Pages.DownloadFileDemoPage;
++import org.openqa.selenium.By;
++import org.openqa.selenium.WebElement;
++import org.testng.Assert;
++import org.testng.annotations.BeforeMethod;
++import org.testng.annotations.Test;
++
++ public class DownloadFileDemoTestCases extends BasePage{
++    private DownloadFileDemoPage downloadFileDemoPage;
++
++    @BeforeMethod
++    public void setUp() {
++        super.setUp();
++        downloadFileDemoPage = new DownloadFileDemoPage(driver);
++
++    }
++    @Test
++    public void download(){
++        downloadFileDemoPage.WebElementDownloadFileDemo1();
++        WebElement download = driver.findElement(By.xpath("//*[@id=\"__next\"]/div[1]/section[2]/div/div/div/div/a/button"));
++        Assert.assertEquals(download.isEnabled(), true);
++    }
++
++
++}
+Index: src/test/java/LoginTestCase.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/LoginTestCase.java b/src/test/java/LoginTestCase.java
+new file mode 100644
+--- /dev/null	(date 1685723860273)
++++ b/src/test/java/LoginTestCase.java	(date 1685723860273)
+@@ -0,0 +1,29 @@
++import Pages.BasePage;
++import Pages.LoginButtonPage;
++import org.openqa.selenium.By;
++import org.openqa.selenium.WebElement;
++import org.testng.Assert;
++import org.testng.annotations.BeforeMethod;
++import org.testng.annotations.Test;
++
++public class LoginTestCase extends BasePage {
++    private LoginButtonPage loginButtonPage;
++
++
++    @BeforeMethod
++    public void setUp() {
++        super.setUp();
++         loginButtonPage = new LoginButtonPage(driver);
++
++    }
++
++
++    @Test
++    public void clickLogin() throws InterruptedException {
++
++        loginButtonPage.Login();
++        WebElement verificareLogin=driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div/div/div[1]/div/form/div[1]/p"));
++        Assert.assertEquals(verificareLogin.isDisplayed(), "Please enter a correct username and password. Note that the password is case-sensitive");
++
++    }}
++      
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"13bb96ec-5fed-403e-b38e-9b749a921741\" name=\"Changes\" comment=\"ProiectFinalIugaMirceaCatalin1\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Pages/CheckboxPage.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Pages/CheckboxPage.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Pages/RadioButtonPage.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Pages/RadioButtonPage.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/CheckboxPageTestCases.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/CheckboxPageTestCases.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/SimpleFormTestCases/RadioButtonTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/SimpleFormTestCases/RadioButtonTest.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/Pages/CheckboxPage.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/Pages/CheckboxPage.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/test-classes/CheckboxPageTestCases.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/test-classes/CheckboxPageTestCases.class\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeInsightWorkspaceSettings\">\r\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Kotlin Class\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/4.8.3/selenium-api-4.8.3-sources.jar!/org/openqa/selenium/By.java\" root0=\"FORCE_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n    <option name=\"importingSettings\">\r\n      <MavenImportingSettings>\r\n        <option name=\"workspaceImportEnabled\" value=\"true\" />\r\n      </MavenImportingSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2PyLs6CCv03Za0Rd3qzP3RYMWv2\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"radioButton\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"TestNG.CheckboxPageTestCases\">\r\n    <configuration name=\"ProiectFinalIugaMirceaCatalin (1)\" type=\"MavenRunConfiguration\" factoryName=\"Maven\">\r\n      <MavenSettings>\r\n        <option name=\"myGeneralSettings\" />\r\n        <option name=\"myRunnerSettings\" />\r\n        <option name=\"myRunnerParameters\">\r\n          <MavenRunnerParameters>\r\n            <option name=\"profiles\">\r\n              <set />\r\n            </option>\r\n            <option name=\"goals\">\r\n              <list />\r\n            </option>\r\n            <option name=\"pomFileName\" />\r\n            <option name=\"profilesMap\">\r\n              <map />\r\n            </option>\r\n            <option name=\"resolveToWorkspace\" value=\"false\" />\r\n            <option name=\"workingDirPath\" value=\"$PROJECT_DIR$\" />\r\n          </MavenRunnerParameters>\r\n        </option>\r\n      </MavenSettings>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"ProiectFinalIugaMirceaCatalin\" type=\"MavenRunConfiguration\" factoryName=\"Maven\" nameIsGenerated=\"true\">\r\n      <MavenSettings>\r\n        <option name=\"myGeneralSettings\" />\r\n        <option name=\"myRunnerSettings\" />\r\n        <option name=\"myRunnerParameters\">\r\n          <MavenRunnerParameters>\r\n            <option name=\"profiles\">\r\n              <set />\r\n            </option>\r\n            <option name=\"goals\">\r\n              <list />\r\n            </option>\r\n            <option name=\"pomFileName\" />\r\n            <option name=\"profilesMap\">\r\n              <map />\r\n            </option>\r\n            <option name=\"resolveToWorkspace\" value=\"false\" />\r\n            <option name=\"workingDirPath\" value=\"$PROJECT_DIR$\" />\r\n          </MavenRunnerParameters>\r\n        </option>\r\n      </MavenSettings>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"CheckboxPageTestCases\" type=\"TestNG\" nameIsGenerated=\"true\">\r\n      <module name=\"ProiectFinalIugaMirceaCatalin\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"CheckboxPageTestCases\" />\r\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"RadioButtonTest\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"ProiectFinalIugaMirceaCatalin\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"SimpleFormTestCases.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"SimpleFormTestCases\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"SimpleFormTestCases.RadioButtonTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"RadioButtonTest.clickOnMaleButton\" type=\"TestNG\" nameIsGenerated=\"true\">\r\n      <module name=\"ProiectFinalIugaMirceaCatalin\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"SimpleFormTestCases.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"SimpleFormTestCases\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"SimpleFormTestCases.RadioButtonTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"clickOnMaleButton\" />\r\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"SimpleFormTestCases (1)\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"ProiectFinalIugaMirceaCatalin\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"SimpleFormTestCases\" />\r\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"SimpleFormTestCases.writeNumbersThenClickOnTheGetCheckedValueButton\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"ProiectFinalIugaMirceaCatalin\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"SimpleFormTestCases.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"SimpleFormTestCases\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"SimpleFormTestCases.SimpleFormTestCases\" />\r\n      <option name=\"METHOD_NAME\" value=\"writeNumbersThenClickOnTheGetCheckedValueButton\" />\r\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Unnamed (1)\" type=\"TestNG\" nameIsGenerated=\"true\">\r\n      <module name=\"ProiectFinalIugaMirceaCatalin\" />\r\n      <shortenClasspath name=\"NONE\" />\r\n      <useClassPathOnly />\r\n      <option name=\"SUITE_NAME\" value=\"\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"\" />\r\n      <option name=\"GROUP_NAME\" value=\"\" />\r\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"OUTPUT_DIRECTORY\" value=\"\" />\r\n      <option name=\"TEST_SEARCH_SCOPE\">\r\n        <value defaultName=\"moduleWithDependencies\" />\r\n      </option>\r\n      <option name=\"PROPERTIES_FILE\" value=\"\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Unnamed\" type=\"TestNG\" nameIsGenerated=\"true\">\r\n      <module name=\"ProiectFinalIugaMirceaCatalin\" />\r\n      <shortenClasspath name=\"NONE\" />\r\n      <option name=\"SUITE_NAME\" value=\"\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"\" />\r\n      <option name=\"GROUP_NAME\" value=\"\" />\r\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"OUTPUT_DIRECTORY\" value=\"\" />\r\n      <option name=\"TEST_SEARCH_SCOPE\">\r\n        <value defaultName=\"moduleWithDependencies\" />\r\n      </option>\r\n      <option name=\"PROPERTIES_FILE\" value=\"\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"&lt;default&gt;\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"ProiectFinalIugaMirceaCatalin\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"TEST_OBJECT\" value=\"PACKAGE\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Maven.ProiectFinalIugaMirceaCatalin (1)\" />\r\n      <item itemvalue=\"Maven.ProiectFinalIugaMirceaCatalin\" />\r\n      <item itemvalue=\"TestNG.Unnamed (1)\" />\r\n      <item itemvalue=\"TestNG.CheckboxPageTestCases\" />\r\n      <item itemvalue=\"TestNG.Unnamed\" />\r\n      <item itemvalue=\"TestNG.RadioButtonTest.clickOnMaleButton\" />\r\n      <item itemvalue=\"TestNG.RadioButtonTest\" />\r\n      <item itemvalue=\"TestNG.SimpleFormTestCases (1)\" />\r\n      <item itemvalue=\"TestNG.SimpleFormTestCases.writeNumbersThenClickOnTheGetCheckedValueButton\" />\r\n      <item itemvalue=\"TestNG.&lt;default&gt;\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"TestNG.RadioButtonTest\" />\r\n        <item itemvalue=\"TestNG.SimpleFormTestCases (1)\" />\r\n        <item itemvalue=\"TestNG.&lt;default&gt;\" />\r\n        <item itemvalue=\"TestNG.SimpleFormTestCases.writeNumbersThenClickOnTheGetCheckedValueButton\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"13bb96ec-5fed-403e-b38e-9b749a921741\" name=\"Changes\" comment=\"\" />\r\n      <created>1684424584738</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1684424584738</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"ProiectFinalIugaMirceaCatalin\">\r\n      <created>1684591953337</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1684591953337</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"ProiectFinalIugaMirceaCatalin\">\r\n      <created>1684608842613</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1684608842613</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"ProiectFinalIugaMirceaCatalin\">\r\n      <created>1684866057409</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1684866057409</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"ProiectFinalIugaMirceaCatalin\">\r\n      <created>1685210136879</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685210136879</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"ProiectFinalIugaMirceaCatalin1\">\r\n      <created>1685378722175</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685378722175</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"ProiectFinalIugaMirceaCatalin1\">\r\n      <created>1685474896556</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685474896556</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"ProiectFinalIugaMirceaCatalin\" />\r\n    <MESSAGE value=\"ProiectFinalIugaMirceaCatalin1\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"ProiectFinalIugaMirceaCatalin1\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/ProiectFinalIugaMirceaCatalin$CheckboxPageTestCases.ic\" NAME=\"CheckboxPageTestCases Coverage Results\" MODIFIED=\"1685468555120\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3336cf0e3fd8fb993e519245d538b87e7aef6c97)
++++ b/.idea/workspace.xml	(date 1685732623908)
+@@ -5,14 +5,19 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="13bb96ec-5fed-403e-b38e-9b749a921741" name="Changes" comment="ProiectFinalIugaMirceaCatalin1">
++      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/LoginButtonPage.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/DownloadFileDemoTestCases.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/LoginTestCase.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/CheckboxPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/CheckboxPage.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/RadioButtonPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/RadioButtonPage.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/CheckboxPageTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CheckboxPageTestCases.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/test/java/SimpleFormTestCases/RadioButtonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SimpleFormTestCases/RadioButtonTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/ProiectFinalIugaMirceaCatalin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProiectFinalIugaMirceaCatalin-1.0-SNAPSHOT.jar" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/Pages/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/BasePage.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/Pages/CheckboxPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/CheckboxPage.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/test-classes/CheckboxPageTestCases.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CheckboxPageTestCases.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/Pages/SimpleFormPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/SimpleFormPage.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/test-classes/SimpleFormTestCases/SimpleFormTestCases.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SimpleFormTestCases/SimpleFormTestCases.class" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -57,23 +62,27 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "last_opened_file_path": "E:/",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CreateClassDialog.RecentsKey">
+       <recent name="radioButton" />
++    </key>
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="E:\" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="TestNG.CheckboxPageTestCases">
++  <component name="RunManager" selected="TestNG.DownloadFileDemoTestCases">
+     <configuration name="ProiectFinalIugaMirceaCatalin (1)" type="MavenRunConfiguration" factoryName="Maven">
+       <MavenSettings>
+         <option name="myGeneralSettings" />
+@@ -125,6 +134,51 @@
+       <option name="PACKAGE_NAME" value="" />
+       <option name="MAIN_CLASS_NAME" value="CheckboxPageTestCases" />
+       <option name="TEST_OBJECT" value="CLASS" />
++      <properties />
++      <listeners />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="DownloadFileDemoPageTestCases" type="TestNG" temporary="true" nameIsGenerated="true">
++      <module name="ProiectFinalIugaMirceaCatalin" />
++      <option name="PACKAGE_NAME" value="" />
++      <option name="MAIN_CLASS_NAME" value="DownloadFileDemoPageTestCases" />
++      <option name="TEST_OBJECT" value="CLASS" />
++      <properties />
++      <listeners />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="DownloadFileDemoTestCases" type="TestNG" temporary="true" nameIsGenerated="true">
++      <module name="ProiectFinalIugaMirceaCatalin" />
++      <option name="PACKAGE_NAME" value="" />
++      <option name="MAIN_CLASS_NAME" value="DownloadFileDemoTestCases" />
++      <option name="TEST_OBJECT" value="CLASS" />
++      <properties />
++      <listeners />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="LoginTestCase" type="TestNG" temporary="true" nameIsGenerated="true">
++      <module name="ProiectFinalIugaMirceaCatalin" />
++      <option name="PACKAGE_NAME" value="" />
++      <option name="MAIN_CLASS_NAME" value="LoginTestCase" />
++      <option name="TEST_OBJECT" value="CLASS" />
++      <properties />
++      <listeners />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="LoginTestCase.clickLogin" type="TestNG" temporary="true" nameIsGenerated="true">
++      <module name="ProiectFinalIugaMirceaCatalin" />
++      <option name="PACKAGE_NAME" value="" />
++      <option name="MAIN_CLASS_NAME" value="LoginTestCase" />
++      <option name="METHOD_NAME" value="clickLogin" />
++      <option name="TEST_OBJECT" value="METHOD" />
+       <properties />
+       <listeners />
+       <method v="2">
+@@ -166,39 +220,30 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="SimpleFormTestCases (1)" type="TestNG" temporary="true" nameIsGenerated="true">
++    <configuration name="Unnamed (1)" type="TestNG" nameIsGenerated="true">
+       <module name="ProiectFinalIugaMirceaCatalin" />
++      <shortenClasspath name="NONE" />
++      <useClassPathOnly />
++      <option name="SUITE_NAME" value="" />
+       <option name="PACKAGE_NAME" value="" />
+-      <option name="MAIN_CLASS_NAME" value="SimpleFormTestCases" />
++      <option name="MAIN_CLASS_NAME" value="" />
++      <option name="GROUP_NAME" value="" />
+       <option name="TEST_OBJECT" value="CLASS" />
++      <option name="PARAMETERS" value="" />
++      <option name="OUTPUT_DIRECTORY" value="" />
++      <option name="TEST_SEARCH_SCOPE">
++        <value defaultName="moduleWithDependencies" />
++      </option>
++      <option name="PROPERTIES_FILE" value="" />
+       <properties />
+       <listeners />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="SimpleFormTestCases.writeNumbersThenClickOnTheGetCheckedValueButton" type="TestNG" temporary="true" nameIsGenerated="true">
+-      <module name="ProiectFinalIugaMirceaCatalin" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="SimpleFormTestCases.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <option name="PACKAGE_NAME" value="SimpleFormTestCases" />
+-      <option name="MAIN_CLASS_NAME" value="SimpleFormTestCases.SimpleFormTestCases" />
+-      <option name="METHOD_NAME" value="writeNumbersThenClickOnTheGetCheckedValueButton" />
+-      <option name="TEST_OBJECT" value="METHOD" />
+-      <properties />
+-      <listeners />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="Unnamed (1)" type="TestNG" nameIsGenerated="true">
++    <configuration name="Unnamed (2)" type="TestNG" nameIsGenerated="true">
+       <module name="ProiectFinalIugaMirceaCatalin" />
+       <shortenClasspath name="NONE" />
+-      <useClassPathOnly />
+       <option name="SUITE_NAME" value="" />
+       <option name="PACKAGE_NAME" value="" />
+       <option name="MAIN_CLASS_NAME" value="" />
+@@ -236,10 +281,20 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
++    <configuration name="login" type="TestNG">
+       <module name="ProiectFinalIugaMirceaCatalin" />
++      <shortenClasspath name="NONE" />
++      <option name="SUITE_NAME" value="" />
+       <option name="PACKAGE_NAME" value="" />
+-      <option name="TEST_OBJECT" value="PACKAGE" />
++      <option name="MAIN_CLASS_NAME" value="" />
++      <option name="GROUP_NAME" value="" />
++      <option name="TEST_OBJECT" value="CLASS" />
++      <option name="PARAMETERS" value="" />
++      <option name="OUTPUT_DIRECTORY" value="" />
++      <option name="TEST_SEARCH_SCOPE">
++        <value defaultName="moduleWithDependencies" />
++      </option>
++      <option name="PROPERTIES_FILE" value="" />
+       <properties />
+       <listeners />
+       <method v="2">
+@@ -249,21 +304,25 @@
+     <list>
+       <item itemvalue="Maven.ProiectFinalIugaMirceaCatalin (1)" />
+       <item itemvalue="Maven.ProiectFinalIugaMirceaCatalin" />
++      <item itemvalue="TestNG.Unnamed (2)" />
++      <item itemvalue="TestNG.login" />
+       <item itemvalue="TestNG.Unnamed (1)" />
+       <item itemvalue="TestNG.CheckboxPageTestCases" />
+       <item itemvalue="TestNG.Unnamed" />
+       <item itemvalue="TestNG.RadioButtonTest.clickOnMaleButton" />
++      <item itemvalue="TestNG.DownloadFileDemoPageTestCases" />
++      <item itemvalue="TestNG.DownloadFileDemoTestCases" />
++      <item itemvalue="TestNG.LoginTestCase.clickLogin" />
++      <item itemvalue="TestNG.LoginTestCase" />
+       <item itemvalue="TestNG.RadioButtonTest" />
+-      <item itemvalue="TestNG.SimpleFormTestCases (1)" />
+-      <item itemvalue="TestNG.SimpleFormTestCases.writeNumbersThenClickOnTheGetCheckedValueButton" />
+-      <item itemvalue="TestNG.&lt;default&gt;" />
+     </list>
+     <recent_temporary>
+       <list>
++        <item itemvalue="TestNG.DownloadFileDemoTestCases" />
++        <item itemvalue="TestNG.DownloadFileDemoPageTestCases" />
++        <item itemvalue="TestNG.LoginTestCase.clickLogin" />
++        <item itemvalue="TestNG.LoginTestCase" />
+         <item itemvalue="TestNG.RadioButtonTest" />
+-        <item itemvalue="TestNG.SimpleFormTestCases (1)" />
+-        <item itemvalue="TestNG.&lt;default&gt;" />
+-        <item itemvalue="TestNG.SimpleFormTestCases.writeNumbersThenClickOnTheGetCheckedValueButton" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -318,7 +377,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1685474896556</updated>
+     </task>
+-    <option name="localTasksCounter" value="7" />
++    <task id="LOCAL-00007" summary="ProiectFinalIugaMirceaCatalin1">
++      <created>1685475089220</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1685475089220</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="VcsManagerConfiguration">
+@@ -331,6 +397,8 @@
+     <select />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/ProiectFinalIugaMirceaCatalin$login.ic" NAME="login Coverage Results" MODIFIED="1685626654429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+     <SUITE FILE_PATH="coverage/ProiectFinalIugaMirceaCatalin$CheckboxPageTestCases.ic" NAME="CheckboxPageTestCases Coverage Results" MODIFIED="1685468555120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
++    <SUITE FILE_PATH="coverage/ProiectFinalIugaMirceaCatalin$LoginTestCase.ic" NAME="LoginTestCase Coverage Results" MODIFIED="1685719933294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/Pages/BasePage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Pages;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.testng.annotations.AfterMethod;\r\nimport org.testng.annotations.BeforeClass;\r\npublic class BasePage {\r\n    protected WebDriver driver;\r\n    private String baseUrl =\"https://www.lambdatest.com/selenium-playground/\";\r\n    public BasePage(){}\r\n    public BasePage(WebDriver driver){\r\n            this.driver = driver;\r\n        }\r\n          @BeforeClass\r\n                  public void setUp() {\r\n              System.setProperty(\"web-driver.chrome.driver\", \"C:\\\\Users\\\\Catalin\\\\Desktop\\\\chromedriver_win32\\\\chromedriver.exe\");\r\n              driver = new ChromeDriver ();\r\n              this.driver.get(baseUrl);\r\n          }\r\n          @AfterMethod\r\n    public void tearDown(){// driver.quit();\r\n         }\r\n        }\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Pages/BasePage.java b/src/main/java/Pages/BasePage.java
+--- a/src/main/java/Pages/BasePage.java	(revision 3336cf0e3fd8fb993e519245d538b87e7aef6c97)
++++ b/src/main/java/Pages/BasePage.java	(date 1685731911625)
+@@ -1,10 +1,11 @@
+ package Pages;
++
+ import org.openqa.selenium.WebDriver;
+ import org.openqa.selenium.chrome.ChromeDriver;
+-import org.testng.annotations.AfterMethod;
++import org.testng.annotations.AfterClass;
+ import org.testng.annotations.BeforeClass;
+ public class BasePage {
+-    protected WebDriver driver;
++    protected static WebDriver driver;
+     private String baseUrl ="https://www.lambdatest.com/selenium-playground/";
+     public BasePage(){}
+     public BasePage(WebDriver driver){
+@@ -15,10 +16,15 @@
+               System.setProperty("web-driver.chrome.driver", "C:\\Users\\Catalin\\Desktop\\chromedriver_win32\\chromedriver.exe");
+               driver = new ChromeDriver ();
+               this.driver.get(baseUrl);
++
+           }
+-          @AfterMethod
++
++    @AfterClass
+     public void tearDown(){// driver.quit();
+-         }
+-        }
++    }
++
++    public void WebElementDownloadFileDemo1() {
++    }
++}
+ 
+ 
+Index: src/main/java/Pages/LoginButtonPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Pages/LoginButtonPage.java b/src/main/java/Pages/LoginButtonPage.java
+new file mode 100644
+--- /dev/null	(date 1685725290951)
++++ b/src/main/java/Pages/LoginButtonPage.java	(date 1685725290951)
+@@ -0,0 +1,23 @@
++package Pages;
++
++import org.openqa.selenium.By;
++import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.WebElement;
++
++public class LoginButtonPage extends BasePage{
++        public LoginButtonPage(WebDriver driver){
++            super(driver);
++            driver.findElement(By.xpath("/html/body/div[1]/header/nav/div/div/div[2]/div/div/div[2]/a[1]")).click();
++
++            driver.findElement(By.id("email")).sendKeys("cataliniuga10@gmail.com");
++            driver.findElement(By.id("password")).sendKeys("Mircea");
++            driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div[2]/form/div[3]/div/div")).click();
++            driver.findElement(By.id("login-button")).click();
++
++
++
++        }
++    By clickLogin = By.xpath("/html/body/div[1]/header/nav/div/div/div[2]/div/div/div[2]/a[1]");
++    public WebElement Login(){return driver.findElement(clickLogin);}
++
++}
+Index: src/main/java/Pages/CheckboxPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Pages;\r\n\r\nimport org.openqa.selenium.By;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.WebElement;\r\n\r\npublic class CheckboxPage extends BasePage{\r\n    public CheckboxPage(WebDriver driver){\r\n        super(driver);\r\n        driver.findElement(By.xpath(\"/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[2]/a\")).click();\r\n        driver.findElement(By.id(\"isAgeSelected\")).click();\r\n    }\r\n    By TxtAgeText =By.id(\"txtAge\");\r\npublic WebElement GetTxtAge(){return driver.findElement(TxtAgeText);}\r\n    By SingleCheckbox = By.id(\"isAgeSelected\");\r\n    public void clickOnSingleCheckbox(){ driver.findElement(SingleCheckbox);}\r\n\r\n    By FirstCheckboxOption = By.id(\"ex1-check1\");\r\n    public void clickOnTheFirstCheckboxOption(){driver.findElement(FirstCheckboxOption).click();}\r\n    By SecondCheckboxOption = By.id(\"ex1-check2\");\r\n    public void clickOnTheSecondCheckboxOption(){driver.findElement(SecondCheckboxOption).click();}\r\n\r\n    By ThirdCheckboxOption = By.id(\"/html/body/div[1]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[2]/div[4]/input\");\r\n    public void clickOnTheThirdCheckboxOption(){driver.findElement(ThirdCheckboxOption).click();}\r\n\r\n    By ForthCheckboxOption = By.xpath(\"ex1-check3\");\r\n    public void clickOnTheForthCheckboxOption(){driver.findElement(ForthCheckboxOption).click();}\r\n\r\n    By CheckAllOption = By.id(\"box\");\r\n    public void clickOnTheCheckAllButton(){driver.findElement(CheckAllOption).click();}\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Pages/CheckboxPage.java b/src/main/java/Pages/CheckboxPage.java
+--- a/src/main/java/Pages/CheckboxPage.java	(revision 3336cf0e3fd8fb993e519245d538b87e7aef6c97)
++++ b/src/main/java/Pages/CheckboxPage.java	(date 1685625134688)
+@@ -7,7 +7,7 @@
+ public class CheckboxPage extends BasePage{
+     public CheckboxPage(WebDriver driver){
+         super(driver);
+-        driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
++
+         driver.findElement(By.id("isAgeSelected")).click();
+     }
+     By TxtAgeText =By.id("txtAge");

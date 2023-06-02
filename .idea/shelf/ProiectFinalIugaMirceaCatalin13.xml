@@ -1,0 +1,69 @@
+<changelist name="ProiectFinalIugaMirceaCatalin13" date="1685734177916" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin13/shelved.patch" />
+  <option name="DESCRIPTION" value="ProiectFinalIugaMirceaCatalin1" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/ProiectFinalIugaMirceaCatalin1/CheckboxPageTestCases.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin13/CheckboxPageTestCases.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value=".idea/shelf/ProiectFinalIugaMirceaCatalin11/CheckboxPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin13/CheckboxPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/Pages/DownloadFileDemoPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin13/DownloadFileDemoPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/Pages/LoginButtonPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin13/LoginButtonPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/classes/Pages/RadioButtonPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin13/RadioButtonPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/surefire-reports/bullet_point.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin13/bullet_point.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/surefire-reports/collapseall.gif" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin13/collapseall.gif" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/surefire-reports/failed.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin13/failed.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/surefire-reports/navigator-bullet.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin13/navigator-bullet.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/surefire-reports/passed.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin13/passed.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/surefire-reports/skipped.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin13/skipped.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/test-classes/SimpleFormTestCases/RadioButtonTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin13/RadioButtonTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="target/test-classes/LoginTestCase.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin13/LoginTestCase.class" />
+  </binary>
+</changelist>
