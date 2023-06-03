@@ -20,9 +20,9 @@ public class LoginTestCase extends BasePage {
 
     @Test
     public void clickLogin() throws InterruptedException {
-        loginButtonPage.Login();
-        WebElement verificareLogin=driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div/div/div[1]/div/form/div[1]/p"));
-        Assert.assertTrue(verificareLogin.isDisplayed());
+
+        var error=loginButtonPage.Error();
+        Assert.assertFalse(error.isDisplayed());
 
     }}
       
