@@ -16,10 +16,10 @@ public class CheckboxPageTestCases extends BasePage {
     public void clickOnTheSingleCheckboxCheckmark() throws InterruptedException {
         checkboxPage.GetTxtAge();
         var text = driver.findElement(By.id("txtAge"));
-        Assert.assertEquals(text.getText(),"Success - Check box is checked");
+        Assert.assertEquals(text.getText(), "Checked");
     }
 
-    @Test
+   @Test
     public void clickOnButtonCheckAll() throws InterruptedException {
         checkboxPage.clickOnTheCheckAllButton();
         var checkbutton = driver.findElement(By.xpath("//*[@id=\"isAgeSelected\"]"));
@@ -27,5 +27,3 @@ public class CheckboxPageTestCases extends BasePage {
     }
 
     }
-
-

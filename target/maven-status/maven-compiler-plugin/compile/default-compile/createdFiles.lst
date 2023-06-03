@@ -1,2 +1,4 @@
 Pages\RadioButtonPage.class
 Pages\CheckboxPage.class
+Pages\LoginButtonPage.class
+Pages\DownloadFileDemoPage.class

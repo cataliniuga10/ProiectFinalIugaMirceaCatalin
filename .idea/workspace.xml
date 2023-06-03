@@ -5,14 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13bb96ec-5fed-403e-b38e-9b749a921741" name="Changes" comment="ProiectFinalIugaMirceaCatalin1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/DownloadFileDemoPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/KeyPressPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/LoginButtonPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DownloadFileDemoTestCases.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/KeyPressTestCases.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/LoginTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/ProiectFinalIugaMirceaCatalin1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/CheckboxPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/CheckboxPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/RadioButtonPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/RadioButtonPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CheckboxPageTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CheckboxPageTestCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SimpleFormTestCases/RadioButtonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SimpleFormTestCases/RadioButtonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/CheckboxPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/CheckboxPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SimpleFormTestCases/RadioButtonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RadioButtonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SimpleFormTestCases/SimpleFormTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SimpleFormTestCases.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/CheckboxPageTestCases.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CheckboxPageTestCases.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SimpleFormTestCases/SimpleFormTestCases.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,28 +60,34 @@
     </option>
   </component>
   <component name="ProjectId" id="2PyLs6CCv03Za0Rd3qzP3RYMWv2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Catalin/IdeaProjects/ProiectFinalIugaMirceaCatalin",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="radioButton" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.CheckboxPageTestCases">
+  <component name="RunManager" selected="TestNG.KeyPressTestCases.PressAkeyAndseeWhatyouInputted">
     <configuration name="ProiectFinalIugaMirceaCatalin (1)" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -131,16 +145,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DownloadFileDemoTestCases" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ProiectFinalIugaMirceaCatalin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DownloadFileDemoTestCases" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeyPressTestCases.PressAkeyAndseeWhatyouInputted" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ProiectFinalIugaMirceaCatalin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="KeyPressTestCases" />
+      <option name="METHOD_NAME" value="PressAkeyAndseeWhatyouInputted" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTestCase" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ProiectFinalIugaMirceaCatalin" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginTestCase" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RadioButtonTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProiectFinalIugaMirceaCatalin" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SimpleFormTestCases.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="SimpleFormTestCases" />
-      <option name="MAIN_CLASS_NAME" value="SimpleFormTestCases.RadioButtonTest" />
+      <option name="MAIN_CLASS_NAME" value="RadioButtonTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -152,12 +200,12 @@
       <module name="ProiectFinalIugaMirceaCatalin" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SimpleFormTestCases.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="SimpleFormTestCases" />
-      <option name="MAIN_CLASS_NAME" value="SimpleFormTestCases.RadioButtonTest" />
+      <option name="MAIN_CLASS_NAME" value="RadioButtonTest" />
       <option name="METHOD_NAME" value="clickOnMaleButton" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -171,24 +219,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SimpleFormTestCases" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleFormTestCases.writeNumbersThenClickOnTheGetCheckedValueButton" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ProiectFinalIugaMirceaCatalin" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SimpleFormTestCases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="SimpleFormTestCases" />
-      <option name="MAIN_CLASS_NAME" value="SimpleFormTestCases.SimpleFormTestCases" />
-      <option name="METHOD_NAME" value="writeNumbersThenClickOnTheGetCheckedValueButton" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -236,16 +266,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ProiectFinalIugaMirceaCatalin" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Maven.ProiectFinalIugaMirceaCatalin (1)" />
       <item itemvalue="Maven.ProiectFinalIugaMirceaCatalin" />
@@ -253,17 +273,19 @@
       <item itemvalue="TestNG.CheckboxPageTestCases" />
       <item itemvalue="TestNG.Unnamed" />
       <item itemvalue="TestNG.RadioButtonTest.clickOnMaleButton" />
+      <item itemvalue="TestNG.KeyPressTestCases.PressAkeyAndseeWhatyouInputted" />
+      <item itemvalue="TestNG.DownloadFileDemoTestCases" />
+      <item itemvalue="TestNG.LoginTestCase" />
       <item itemvalue="TestNG.RadioButtonTest" />
       <item itemvalue="TestNG.SimpleFormTestCases (1)" />
-      <item itemvalue="TestNG.SimpleFormTestCases.writeNumbersThenClickOnTheGetCheckedValueButton" />
-      <item itemvalue="TestNG.&lt;default&gt;" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.KeyPressTestCases.PressAkeyAndseeWhatyouInputted" />
+        <item itemvalue="TestNG.LoginTestCase" />
+        <item itemvalue="TestNG.DownloadFileDemoTestCases" />
         <item itemvalue="TestNG.RadioButtonTest" />
         <item itemvalue="TestNG.SimpleFormTestCases (1)" />
-        <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.SimpleFormTestCases.writeNumbersThenClickOnTheGetCheckedValueButton" />
       </list>
     </recent_temporary>
   </component>
@@ -318,19 +340,29 @@
       <option name="project" value="LOCAL" />
       <updated>1685474896556</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ProiectFinalIugaMirceaCatalin11">
+      <created>1685735933455</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685735933455</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ProiectFinalIugaMirceaCatalin" />
     <MESSAGE value="ProiectFinalIugaMirceaCatalin1" />
-    <option name="LAST_COMMIT_MESSAGE" value="ProiectFinalIugaMirceaCatalin1" />
+    <MESSAGE value="ProiectFinalIugaMirceaCatalin11" />
+    <option name="LAST_COMMIT_MESSAGE" value="ProiectFinalIugaMirceaCatalin11" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ProiectFinalIugaMirceaCatalin$login.ic" NAME="login Coverage Results" MODIFIED="1685626654429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/ProiectFinalIugaMirceaCatalin$CheckboxPageTestCases.ic" NAME="CheckboxPageTestCases Coverage Results" MODIFIED="1685468555120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ProiectFinalIugaMirceaCatalin$LoginTestCase.ic" NAME="LoginTestCase Coverage Results" MODIFIED="1685719933294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

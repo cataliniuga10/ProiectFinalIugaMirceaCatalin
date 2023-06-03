@@ -1,5 +1,3 @@
-package SimpleFormTestCases;
-
 import Pages.BasePage;
 import Pages.RadioButtonPage;
 import org.openqa.selenium.By;
