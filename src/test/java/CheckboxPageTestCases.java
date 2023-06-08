@@ -13,7 +13,7 @@ public class CheckboxPageTestCases extends BasePage {
         checkboxPage = new CheckboxPage(driver);
     }
     @Test
-    public void clickOnTheSingleCheckboxCheckmark() throws InterruptedException {
+  public void clickOnTheSingleCheckboxCheckmark() throws InterruptedException {
         checkboxPage.GetTxtAge();
         var text = driver.findElement(By.id("txtAge"));
         Assert.assertEquals(text.getText(), "Checked");

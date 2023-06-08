@@ -20,9 +20,10 @@ public class LoginTestCase extends BasePage {
 
     @Test
     public void clickLogin() throws InterruptedException {
+        loginButtonPage.Error();
+       WebElement Error1= driver.findElement(By.xpath("//*[@id=\"header\"]/nav/div/div/div[2]/div/div/div[2]/a[1]"));
+        Assert.assertEquals(Error1.isDisplayed(),"Please enter a correct username and password. Note that the password is case-sensitive");
 
-        var error=loginButtonPage.Error();
-        Assert.assertFalse(error.isDisplayed());
 
     }}
       
