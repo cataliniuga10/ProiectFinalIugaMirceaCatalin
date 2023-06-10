@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CheckboxPage extends BasePage{
-    public CheckboxPage(WebDriver driver){
+    public CheckboxPage(WebDriver driver) {
         super(driver);
         driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         driver.findElement(By.id("isAgeSelected")).click();

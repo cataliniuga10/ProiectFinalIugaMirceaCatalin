@@ -14,7 +14,7 @@ public class RadioButtonTest extends BasePage {
    @Test
 
    public void clickOnMaleButton() throws InterruptedException{
-       By radioButton = By.xpath("radioButton");
+       By radioButton = By.name("optradio");
        var radioButton1 = driver.findElement(radioButton);
         Assert.assertEquals(radioButton1.isSelected(), true );
 

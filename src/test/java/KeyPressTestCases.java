@@ -21,7 +21,7 @@ public class KeyPressTestCases extends BasePage {
     public void PressAkeyAndseeWhatyouInputted() throws InterruptedException{
         keyPressPage.cLickOnSelenium();
         WebElement searchResult = driver.findElement(By.id("my_field"));
-        Assert.assertTrue(searchResult.isDisplayed(),"NUMPAD5"); ;
+        Assert.assertTrue(searchResult.isDisplayed(),"NUMPAD5");
 
     }
 
